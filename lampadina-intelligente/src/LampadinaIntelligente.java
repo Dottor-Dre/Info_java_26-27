@@ -37,15 +37,26 @@ public class LampadinaIntelligente {
             this.illuminazione -= 10;
         }
     }
-    public void get(String name){
-        this.nome = name;
+
+    public String getNome() {
+        return nome;
     }
-    public void set(String color){
-        this.colore = color;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    public String toString(){
-        return "Nome: " + this.nome + ", Potenza: " + this.potenza + " watt, Stato: "
-        + this.stato + ", Qta: " + this.illuminazione + "%, Colore: " + this.colore;
+
+    public String getColore() {
+        return colore;
     }
+    public void setColore(String colore) {
+        this.colore = colore;
+    }
+    @Override
+    public String toString() {
+        return "Nome: " + this.nome + ", Potenza: " + this.potenza + " Watt, Accesa: " + stato + ", Intensità: " + this.illuminazione + ", Colore: " + this.colore;
+    }
+
+
+
 
 }
