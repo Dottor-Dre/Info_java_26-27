@@ -1,7 +1,14 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Punto p1 = new Punto(5,3);
-        Punto p2 = new Punto(3,2);
+        Scanner tastiera = new Scanner(System.in);
+        System.out.println("Inserisci i punti: ");
+        double x1 = tastiera.nextInt();
+        double y1 = tastiera.nextInt();
+        Punto p1 = new Punto(x1,y1);
+        double x2 = tastiera.nextInt();
+        double y2 = tastiera.nextInt();
+        Punto p2 = new Punto(x2,y2);
         Rettangolo r = new Rettangolo(p1,p2);
         System.out.println("Punto1 (" + p1.x + "," + p1.y + ")");
         System.out.println("Punto1 (" + p2.x + "," + p2.y + ")");
