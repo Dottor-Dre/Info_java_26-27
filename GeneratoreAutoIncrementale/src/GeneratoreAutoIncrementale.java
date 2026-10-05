@@ -3,14 +3,18 @@ public class GeneratoreAutoIncrementale {
     int numZeri=0;
     int numero = 0;
     String zeri;
+    private int numeroMAX = 0;
     private int potenza = 10;
+
+
     public GeneratoreAutoIncrementale(String pref, int num){
         this.prefisso = pref;
         this.numZeri = num-1;
+        this.numeroMAX = (int) Math.pow(10, num) - 1;
     }
 
     public String genera(){
-        if (numZeri > 0){
+        if (numero < numeroMAX){
             numero++;
             if (numero == potenza){
                 numZeri--;
