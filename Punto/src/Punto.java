@@ -9,6 +9,10 @@ public class Punto {
         this.x= punto.x;
         this.y= punto.y;
     }
+    public Punto(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
     public double distanza(Punto punto){
         return Math.sqrt(Math.pow(x - punto.x, 2) + Math.pow(y - punto.y, 2));
     }
