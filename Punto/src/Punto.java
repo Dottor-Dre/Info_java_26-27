@@ -18,7 +18,15 @@ public class Punto {
         p.y = (this.y + punto.y)/2;
         return p;
     }
-    public void ruota(){
+    public void ruota(double angolo){
+        double temp = x;
+        angolo = Math.toRadians(angolo);
+        x = x * Math.cos(angolo) - y * Math.sin(angolo);
+        y = temp * Math.sin(angolo) + y * Math.cos(angolo);
+    }
 
+    @Override
+    public String toString() {
+        return "Punto: (" + x + ";" + y + ")";
     }
 }
