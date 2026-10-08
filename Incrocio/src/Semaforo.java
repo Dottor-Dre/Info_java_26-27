@@ -3,15 +3,15 @@ public class Semaforo {
     boolean accesa;
     public String avanza(){
         if (accesa){
-            if (colore == "Verde"){colore = "Gialla";
-            } else if (colore == "Gialla"){colore = "Rossa";
-            } else if (colore == "Rosso"){colore = "Verde";}
+            if (colore.equals("Verde")){colore = "Gialla";
+            } else if (colore.equals("Gialla")){colore = "Rosso";
+            } else if (colore.equals("Rosso")){colore = "Verde";}
         }
         return colore;
     }
     public char ColoreRidotto(){
-        if (colore == "Verde"){return 'V';}
-        else if (colore == "Rosso"){return 'R';}
+        if (colore.equals("Verde")){return 'V';}
+        else if (colore.equals("Rosso")){return 'R';}
         return 'G';
     }
 

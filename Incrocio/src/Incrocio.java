@@ -30,17 +30,30 @@ public class Incrocio {
         acceso = false;
     }
     public void avanzare(char a){
-        if (Nord.avanza() == Ovest.colore || Nord.avanza() == Est.colore ||
-                Sud.avanza() == Ovest.colore || Sud.avanza() == Est.colore ||
-                Ovest.avanza() == Nord.colore || Ovest.avanza() == Sud.colore||
-                Est.avanza() == Nord.colore || Est.avanza() == Sud.colore) {
-                    if (a == 'N'){Nord.avanza();}
-                    else if (a == 'S'){Sud.avanza();}
-                    else if (a == 'O'){Ovest.avanza();}
-                    else if (a == 'E'){Est.avanza();}
+            if (a == 'N') {
+                if (!Nord.colore.equals("Verde") || (!Ovest.colore.equals("Verde") && !Est.colore.equals("Verde"))) {
+                    Nord.avanza();
+                }
+            }
+            else if (a == 'S') {
+                if (!Sud.colore.equals("Verde") || (!Ovest.colore.equals("Verde") && !Est.colore.equals("Verde"))) {
+                    Sud.avanza();
+                }
+            }
+            else if (a == 'O') {
+                if (!Ovest.colore.equals("Verde") || (!Nord.colore.equals("Verde") && !Sud.colore.equals("Verde"))) {
+                    Ovest.avanza();
+                }
+            }
+            else if (a == 'E') {
+                if (!Est.colore.equals("Verde") || (!Nord.colore.equals("Verde") && !Sud.colore.equals("Verde"))) {
+                    Est.avanza();
+                }
+            }
         }
-    }
-    public boolean isAcceso(Incrocio s){return acceso;}
+
+
+    public boolean isAcceso(){return acceso;}
 
 
     public String getColore(char a){
