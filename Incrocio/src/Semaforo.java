@@ -9,6 +9,11 @@ public class Semaforo {
         }
         return colore;
     }
+    public char ColoreRidotto(){
+        if (colore == "Verde"){return 'V';}
+        else if (colore == "Rosso"){return 'R';}
+        return 'G';
+    }
 
 }
 

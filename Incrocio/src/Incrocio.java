@@ -1,8 +1,8 @@
 public class Incrocio {
-    Semaforo Nord;
-    Semaforo Sud;
-    Semaforo Ovest;
-    Semaforo Est;
+    Semaforo Nord = new Semaforo();
+    Semaforo Sud = new Semaforo();
+    Semaforo Ovest = new Semaforo();
+    Semaforo Est = new Semaforo();
     private boolean acceso = false;
 
     public Incrocio(){
@@ -57,13 +57,20 @@ public class Incrocio {
         }
         return "";
     }
-    public char ColoreRidotto(Semaforo s){
-        if (s.colore == "Verde"){return 'V';}
-        else if (s.colore == "Rosso"){return 'R';}
-        return 'G';
-    }
+
     @Override
     public String toString() {
-        return "";
+        String s = "      |   N   |"
+                +"\n      |       |"
+                +"\n      | "+Nord.ColoreRidotto()+"     |"
+                +"\n-------       -------"
+                +"\n              "+Ovest.ColoreRidotto()
+                +"\nE                   O"
+                +"\n      "+Est.ColoreRidotto()
+                +"\n-------       -------"
+                +"\n      |     "+Sud.ColoreRidotto()+" |"
+                +"\n      |       |"
+                +"\n      |   S   |";
+        return s;
     }
 }
