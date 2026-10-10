@@ -1,7 +1,14 @@
 import java.util.Scanner;
 public class Main {
     public static Angolo creaAngolo(){
+        Scanner input = new Scanner(System.in);
         Angolo a=null;
+        int g,p,s;
+        System.out.println("Inseirisci i gradi, primi e secondi dell'angolo");
+        g = input.nextInt();
+        p = input.nextInt();
+        s = input.nextInt();
+        Angolo angolo = new Angolo(g,p,s);
         return a;
     }
     public static void main(String[] args) {
@@ -17,11 +24,7 @@ public class Main {
             scelta = input.nextInt();
             switch (scelta){
                 case 1:
-                    System.out.println("Inseirisci i gradi, primi e secondi dell'angolo");
-                    g = input.nextInt();
-                    p = input.nextInt();
-                    s = input.nextInt();
-                    angolo = new Angolo(g,p,s);
+                    creaAngolo();
                     break;
                 case 2:
 
