@@ -42,8 +42,7 @@ public class Main {
                     p = input.nextInt();
                     s = input.nextInt();
                     Angolo angolo2 = new Angolo(g,p,s);
-                    angolo.sommaAngolo(angolo2);
-                    System.out.println(angolo.toString());
+                    System.out.println(angolo.sottraiAngolo(angolo2));
                     break;
             }
         }while(scelta!=0);
