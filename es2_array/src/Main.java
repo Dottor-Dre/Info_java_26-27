@@ -13,7 +13,7 @@ public class Main {
             v[i] = (int)(Math.random()*a + b);
             if (v[i] > b && v[i] < m){
                 System.out.println(v[i]);
-            }
+            }ù
         }
 
 
