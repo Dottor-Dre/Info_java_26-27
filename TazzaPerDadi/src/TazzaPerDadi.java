@@ -20,7 +20,7 @@ public class TazzaPerDadi {
     //DA VEDEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     public void add(Dado dado){
         if (this.dadi[dadi.length-1].getFacce() != 0){
-
+            
         }
     }
     public int lancia(){
