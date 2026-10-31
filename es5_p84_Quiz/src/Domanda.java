@@ -39,4 +39,22 @@ public class Domanda {
         }
         return 0;
     }
+    public boolean completata(){
+        if (risposta_utente == -1){
+            return false;
+        }
+        return true;
+    }
+    public int getRispostaCorretta(){return risposta_giusta;}
+    public String getRispostaData(){
+        if (risposta_utente == -1){
+            return null;
+        }
+        return opzioni[risposta_giusta].risposta;
+    }
+    @Override
+    public String toString(){
+        return domanda + "\n1)" + opzioni[0].risposta + "\n2)" + opzioni[1].risposta + "\n3)" + opzioni[2].risposta + "\n4)" + opzioni[3].risposta;
+    }
+
 }
