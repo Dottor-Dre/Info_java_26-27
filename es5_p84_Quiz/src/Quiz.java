@@ -42,4 +42,30 @@ public class Quiz {
         }
         return non_risposte;
     }
+    public String getDomanda(int indice){
+        int quante = getQuanteDomande();
+        if (indice > quante){
+            return domande[indice].domanda;
+        }
+        return null;
+    }
+    public int getTotale(){
+        int quante = getQuanteDomande();
+        int totale=0;
+        for (int i = 0; i < quante; i++) {
+            totale += domande[i].valore;
+        }
+        return totale;
+    }
+
+    public int getPunteggio(){
+        int quante = getQuanteDomande();
+        int totale=0;
+        for (int i = 0; i < quante; i++) {
+            if (domande[i].risposta_utente != -1){
+                totale += domande[i].valore;
+            }
+        }
+        return totale;
+    }
 }
