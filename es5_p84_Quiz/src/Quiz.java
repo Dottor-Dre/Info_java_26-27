@@ -68,4 +68,12 @@ public class Quiz {
         }
         return totale;
     }
+    @Override
+    public String toString(){
+        String s = "";
+        s += "Quiz: "  + titolo;
+        s += "\nNumero Domande: " + getQuanteDomande();
+        s += "\nPunteggio totale: " + getPunteggio();
+        return s;
+    }
 }
