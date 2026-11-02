@@ -7,5 +7,7 @@ public class Main {
             r[i].risposta = "ddddd";
         }
         Domanda d = new Domanda("ciao",r,2 );
-        System.out.println(d.toString());
+        Quiz quiz = new Quiz("bho");
+        quiz.add(d);
+        System.out.println(quiz.toString());
     }}
