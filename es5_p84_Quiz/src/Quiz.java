@@ -14,13 +14,7 @@ public class Quiz {
         }
     }
     public int getQuanteDomande(){
-        int quante=0;
-        for (int i = 0; i < domande.length; i++) {
-            if (domande[i] != null){
-                quante++;
-            }
-        }
-        return quante;
+        return domande.length;
     }
     public int getQuanteRisposte(){
         int quante = getQuanteDomande(), cont= 0 ;
@@ -72,7 +66,7 @@ public class Quiz {
     public String toString(){
         String s = "";
         s += "Quiz: "  + titolo;
-        s += "\nNumero Domande: " + getQuanteDomande();
+        s += "\nNumero Domande: " + getDomandeNonDate() + getQuanteRisposte();
         s += "\nPunteggio totale: " + getPunteggio();
         return s;
     }
