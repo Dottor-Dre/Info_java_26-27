@@ -13,7 +13,7 @@ public class Main {
         r[2].risposta = "calabria";
         r[3].risposta = "como";
         Domanda d = new Domanda("Qual'è l capitale d'italia?",r,2 );
-        Quiz quiz = new Quiz("bho");
+        Quiz quiz = new Quiz("Capitali");
         quiz.add(d);
         System.out.println(quiz.domande[0].toString());
         int risposta = scanner.nextInt();
