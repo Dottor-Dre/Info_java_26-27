@@ -1,6 +1,5 @@
 package it.scuola.esercizi;
 
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -15,6 +14,12 @@ class Azione{
         nome_azione = azione;
         livello=liv;
         se_azione=true;
+    }
+    public Azione(Azione a){
+        nome_azione=a.nome_azione;
+        livello=a.livello;
+        d=a.d;
+        se_azione=a.se_azione;
     }
 
     public String getNome_azione() {
@@ -55,14 +60,14 @@ public class Logger {
     public boolean add(Azione a){
         for (int i = 0; i < azioni.length; i++) {
             if (!azioni[i].se_azione){
-                azioni[i]=a;
+                azioni[i]= new Azione(a);
                 return true;
             }
         }
         return false;
     }
 
-    public String get_azione(int indice){
+    public String get(int indice){
         if (indice >= 0 && indice < azioni.length && !azioni[indice].se_azione){
             return azioni[indice].getNome_azione();
         }
