@@ -4,7 +4,7 @@ import java.time.Instant;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Instant i= Instant.now();
-        Azione a = new Azione("esercizio", 1, i);
+
+        Azione a = new Azione("esercizio", 1);
     }
 }

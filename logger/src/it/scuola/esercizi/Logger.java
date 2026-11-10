@@ -2,16 +2,16 @@ package it.scuola.esercizi;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 class Azione{
     private String nome_azione;
     private int livello;
-    private Instant i;
+    private LocalDateTime d;
     boolean se_azione=false;
-    public Azione(String azione, int liv, Instant now){
-        i = Instant.now();
-        i = now;
+    public Azione(String azione, int liv){
+        d = LocalDateTime.now();
         nome_azione = azione;
         livello=liv;
         se_azione=true;
@@ -25,8 +25,8 @@ class Azione{
         return livello;
     }
 
-    public Instant getData() {
-        return i;
+    public LocalDateTime getData() {
+        return d;
     }
     @Override
     public String toString(){
@@ -42,7 +42,7 @@ class Azione{
         } else {
             s="evento critico";
         }
-        return "Descrizione: " + nome_azione + "\n" + i + "\n" + s;
+        return "Descrizione: " + nome_azione + "\n" + d + "\n" + s;
     }
 }
 
