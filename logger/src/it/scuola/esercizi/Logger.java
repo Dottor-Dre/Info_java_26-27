@@ -2,7 +2,7 @@ package it.scuola.esercizi;
 
 import java.time.Instant;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 
 class Azione{
     private String nome_azione;
