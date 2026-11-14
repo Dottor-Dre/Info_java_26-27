@@ -14,5 +14,14 @@ public class Main {
         for (int i = 0; i < ellipses.length; i++) {
             ellipses[i].draw();
         }
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Rectangle r = new Rectangle(100,100,100,100);
+        r .setColor(Color.GREEN);
+        r.fill();
+
     }
 }
