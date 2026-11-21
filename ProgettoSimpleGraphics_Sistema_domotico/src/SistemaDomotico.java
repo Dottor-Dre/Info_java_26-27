@@ -12,8 +12,7 @@ public class SistemaDomotico {
     public SistemaDomotico(int MAX) {
         if (MAX < 1) {
             MAX = 100;
-        }
-        else {
+        } else {
             sistema = new ArrayList<>(MAX);
         }
     }
