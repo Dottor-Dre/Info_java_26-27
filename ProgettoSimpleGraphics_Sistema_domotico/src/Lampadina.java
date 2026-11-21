@@ -1,17 +1,16 @@
 public class Lampadina {
-    int potenza;
-    int illuminazione;
-    String colore;
-    String nome;
-    String stato;
+    private int potenza;
+    private int illuminazione;
+    private String colore;
+    private String nome;
+    private String stato;
 
-    public Lampadina( ){
-        this.potenza = 40;
+    public Lampadina(int potenza ){
+        this.potenza = potenza;
         this.illuminazione = 50;
         this.colore = "bianco";
         this.nome = "";
         this.stato = "spento";
-
     }
 
     public Lampadina(Lampadina l){
@@ -28,6 +27,7 @@ public class Lampadina {
     public void spegni(){
         this.stato = "spento";
     }
+
     public void aumentaIlluminazione(){
         if (illuminazione < 100){
             this.illuminazione += 10;
@@ -52,6 +52,11 @@ public class Lampadina {
     public void setColore(String colore) {
         this.colore = colore;
     }
+
+    public int getIlluminazione() {
+        return illuminazione;
+    }
+
     @Override
     public String toString() {
         return "Nome: " + this.nome + ", Potenza: " + this.potenza + " Watt, Accesa: " + stato + ", Intensità: " + this.illuminazione + ", Colore: " + this.colore;
