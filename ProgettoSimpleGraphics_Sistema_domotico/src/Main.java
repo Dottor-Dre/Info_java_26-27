@@ -8,35 +8,47 @@ public class Main {
         int n = 1;
         Picture p = new Picture("esempio_planimetria_casa.png");
         p.draw();
-        SistemaDomotico sistema = new SistemaDomotico(4);
+        SistemaDomotico sistemaDomotico = new SistemaDomotico();
 
-        Lampadina l1 = new Lampadina(50);
-        Lampadina l2 = new Lampadina(50);
-        Lampadina l3 = new Lampadina(50);
-        Lampadina l4 = new Lampadina(50);
-        if (sistema.add(l1)){
-            System.out.println("lampadina aggiunta");
-        }
-        sistema.add(l2);
-        sistema.add(l3);
-        sistema.add(l4);
+        int potenza, illuminazione;
+        String colore, stato, nome;
 
-        l1.disegna();
-        l2.disegna();
-        l3.disegna();
-        l4.disegna();
         do {
+
+            System.out.println("\n 1. crea una nuova lampadina \n 2. accendi tutte \n 3. spegni tutte \n 4. rimuovi una lampadina \n 5. cambia il colore a una lampadina \n 6. cambia intensità di una lampadina \n 7. cerca una lampadina \n 8. quante lampadine ci sono \n 9. potenza totale");
             n = in.nextInt();
             switch (n){
                 case 1:
-                        sistema.spegniLampadine();
-                        System.out.println(sistema.toString());
-                        break;
+                    System.out.println("inserire la potenza della lampadina");
+                    potenza = in.nextInt();
+                    Lampadina lampadina = new Lampadina(potenza);
+                    System.out.println("inserire il livello di illuminazione");
+                    illuminazione = in.nextInt();
+                    lampadina.setIlluminazione(illuminazione);
+                    System.out.println("inserire il colore");
+                    colore = in.nextLine();
+                    lampadina.setColore(colore);
+                    System.out.println("inserire lo stato");
+                    stato = in.nextLine();
+                    lampadina.setStato(stato);
+                    System.out.println("inserire il nome");
+                    nome = in.nextLine();
+                    lampadina.setNome(nome);
+
+                    sistemaDomotico.add(lampadina);
+                    System.out.println(lampadina.toString());
+                    break;
 
                 case 2:
-                    sistema.accendiLampadine();
-                    System.out.println(sistema.toString());
+                    sistemaDomotico.accendiLampadine();
                     break;
+
+                case 3:
+                    sistemaDomotico.spegniLampadine();
+                    break;
+
+                case 4:
+                    sistemaDomotico.rimuovi(nome);
             }
         } while (n != 0);
         System.exit(0);

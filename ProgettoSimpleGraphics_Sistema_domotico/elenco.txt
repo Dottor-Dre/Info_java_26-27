@@ -1,0 +1,11 @@
+aggiungi (in che stanza)
+accendi
+spegni
+accendi tutte
+spegni tutte
+rimuovi
+cambia colore
+cambia intensità
+cerca
+quante
+potenza tot

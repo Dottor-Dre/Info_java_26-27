@@ -49,13 +49,14 @@ public class Lampadina {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public String getColore() {
         return colore;
     }
     public void setColore(String colore) {
         this.colore = colore;
     }
+    public void setStato(String stato) {this.stato = stato;}
+    public void setIlluminazione(int illuminazione) {this.illuminazione = illuminazione;}
 
     public void setX(int x) {
         this.x = x;
