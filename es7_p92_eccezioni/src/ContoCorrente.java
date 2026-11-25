@@ -4,7 +4,7 @@ public class ContoCorrente {
     String codice;
     double saldo;
 
-    public ContoCorrente(){
+    public ContoCorrente() throws PrelievoNonValidoExeption, DepositoNonValidoExeption{
         this.nome = "Francesco";
         this.cognome = "Drera";
         this.codice = "X7K9P2W4";
@@ -14,13 +14,13 @@ public class ContoCorrente {
         if (s >= 0 || this.saldo - s >= 0){
             this.saldo -= s;
         }
-        return this.saldo;
+        throw new PrelievoNonValidoExeption();
     }
     public double deposita(double s){
         if (s >= 0){
             this.saldo += s;
         }
-        return this.saldo;
+        throw new DepositoNonValidoExeption();
     }
     public double getSaldo(){return this.saldo;}
     public String getCodice(){return this.codice;}
