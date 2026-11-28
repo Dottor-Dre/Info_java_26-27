@@ -32,16 +32,16 @@ public class Lampadina {
         this.stato = "spento";
     }
 
-    public void aumentaIlluminazione(){
-        if (illuminazione < 100){
-            this.illuminazione += 10;
-        }
-    }
-    public void diminusiciIlluminazione(){
-        if (illuminazione > 0){
-            this.illuminazione -= 10;
-        }
-    }
+//    public void aumentaIlluminazione(){
+//        if (illuminazione < 100){
+//            this.illuminazione += 10;
+//        }
+//    }
+//    public void diminusiciIlluminazione(){
+//        if (illuminazione > 0){
+//            this.illuminazione -= 10;
+//        }
+//    }
 
     public String getNome() {
         return nome;

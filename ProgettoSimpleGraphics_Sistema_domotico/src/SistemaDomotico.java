@@ -83,6 +83,23 @@ public class SistemaDomotico {
         return potenzaTot;
     }
 
+    public int posizioneLampadina(String nome){
+        for (int i = 0; i < sistema.size(); i++) {
+            if(sistema.get(i).getNome() == nome){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void cambiaColore (int i, String colore){
+        sistema.get(i).setColore(colore);
+        }
+
+        public void cambiaIntensita (String nome, int intensita){
+            sistema.get(posizioneLampadina(nome)).setIlluminazione(intensita);
+        }
+
     @Override
     public String toString() {
         return "Sistema domotico con " + nLampadine + " lampdine su un massimo di " + sistema.size();

@@ -48,7 +48,41 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.println("inserire il nome della lampadina da rimuovere");
+                    nome = in.nextLine();
                     sistemaDomotico.rimuovi(nome);
+                    break;
+
+                case 5:
+                    System.out.println("inserire il nome della lampadina");
+                    nome = in.nextLine();
+                    System.out.println("inserire il colore");
+                    colore = in.nextLine();
+                    sistemaDomotico.cambiaColore(sistemaDomotico.posizioneLampadina(nome), colore);
+                    break;
+
+                case 6:
+                    System.out.println("inserire il nome della lampadina");
+                    nome = in.nextLine();
+                    System.out.println("inserire l'intensita");
+                    illuminazione = in.nextInt();
+                    sistemaDomotico.cambiaIntensita(nome, illuminazione);
+                    break;
+
+                    case 7:
+                        System.out.println("inserire il nome della lampadina");
+                        nome = in.nextLine();
+                        Lampadina l = new Lampadina(50);
+                        l = sistemaDomotico.cerca(nome);
+                        System.out.println(l.toString());
+                    break;
+
+                case 8:
+                    System.out.println("ci sono " + sistemaDomotico.getQuanteLampadine() + " lampadine");
+                    break;
+
+                case 9:
+                    System.out.println("la potenza totale è di " + sistemaDomotico.getPotenzaAttuale() + " watt");
             }
         } while (n != 0);
         System.exit(0);
