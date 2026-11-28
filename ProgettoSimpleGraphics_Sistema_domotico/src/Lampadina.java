@@ -25,24 +25,13 @@ public class Lampadina {
         this.stato = l.stato;
         this.nome = l.nome;
     }
+
     public void accendi(){
         this.stato = "accesa";
     }
     public void spegni(){
         this.stato = "spento";
     }
-
-//    public void aumentaIlluminazione(){
-//        if (illuminazione < 100){
-//            this.illuminazione += 10;
-//        }
-//    }
-//    public void diminusiciIlluminazione(){
-//        if (illuminazione > 0){
-//            this.illuminazione -= 10;
-//        }
-//    }
-
     public String getNome() {
         return nome;
     }
@@ -52,8 +41,12 @@ public class Lampadina {
     public void setColore(String colore) {
         this.colore = colore;
     }
-    public void setStato(String stato) {this.stato = stato;}
-    public void setIlluminazione(int illuminazione) {this.illuminazione = illuminazione;}
+    public void setStato(String stato) {
+        this.stato = stato;
+    }
+    public void setIlluminazione(int illuminazione) {
+        this.illuminazione = illuminazione;
+    }
 
     public void setX(int x) {
         this.x = x;
@@ -69,8 +62,7 @@ public class Lampadina {
 
     public void disegna(){
         Ellipse e = new Ellipse(x, y, 50, 50);
-        e.setColor(Color.YELLOW);
-        e.fill();
+
     }
 
     @Override
