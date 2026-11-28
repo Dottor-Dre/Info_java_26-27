@@ -5,14 +5,15 @@ public class SistemaDomotico {
     private int maxLampadine;
 
     public SistemaDomotico() {
-        sistema = new ArrayList<>(100);
+        this.sistema = new ArrayList<>(100);
+        this.maxLampadine = 100;
     }
 
     public SistemaDomotico(int maxLampadine) {
         if (maxLampadine < 1) {
-            maxLampadine = 100;
+            this.maxLampadine = 100;
         } else {
-            sistema = new ArrayList<>(maxLampadine);
+            this.maxLampadine = maxLampadine;
         }
     }
 
@@ -57,7 +58,7 @@ public class SistemaDomotico {
     public ArrayList<String> getElencoLampadine(){
         ArrayList<String> s = new ArrayList<>(sistema.size());
         for (int i = 0; i < sistema.size(); i++) {
-            s.add(sistema.get(i).getNome());
+            s.add(sistema.get(i).toString());
         }
         return s;
     }

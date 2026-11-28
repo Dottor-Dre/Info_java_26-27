@@ -17,6 +17,7 @@ public class Main {
 
             System.out.println("\n 1. crea una nuova lampadina \n 2. accendi tutte \n 3. spegni tutte \n 4. rimuovi una lampadina \n 5. cambia il colore a una lampadina \n 6. cambia intensità di una lampadina \n 7. cerca una lampadina \n 8. quante lampadine ci sono \n 9. potenza totale \n 10. elenco delle lampadine");
             n = in.nextInt();
+            in.nextLine();
             switch (n){
                 case 1:
                     System.out.println("inserire la potenza della lampadina");
@@ -30,7 +31,7 @@ public class Main {
                     System.out.println("inserire il colore");
                     colore = in.nextLine();
                     lampadina.setColore(colore);
-                    System.out.println("inserire lo stato");
+                    System.out.println("inserire lo stato (acceso o spento)");
                     stato = in.nextLine();
                     lampadina.setStato(stato);
                     System.out.println("inserire il nome");
@@ -68,6 +69,7 @@ public class Main {
                     nome = in.nextLine();
                     System.out.println("inserire l'intensita");
                     illuminazione = in.nextInt();
+                    in.nextLine();
                     sistemaDomotico.cambiaIntensita(nome, illuminazione);
                     break;
 
